@@ -1,0 +1,39 @@
+# PATH
+set PATH ~/bin $PATH
+
+# Language
+set -x LC_ALL en_US.UTF-8
+set -x LANG en_US.UTF-8
+
+# default editor
+set -x EDITOR nvim
+
+# Alias
+alias vim='nvim'
+alias cat='bat'
+
+# asdf
+source /usr/local/opt/asdf/asdf.fish
+
+# direnv
+eval (direnv hook fish)
+
+# fzf
+# set -U FZF_DEFAULT_COMMAND 'fd -type f'
+set -U FZF_DEFAULT_COMMAND 'ag -g ""'
+set -U FZF_DEFAULT_OPTS "--height 40% --layout=reverse --inline-info"
+set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_PREVIEW_FILE_CMD "bat --color=always --style=header,grid --line-range :100 {}"
+set -U FZF_TMUX 1
+
+# ghq
+set -x GHQ_SELECTOR fzf-tmux
+
+# tmux
+alias tmux='tmux -u'
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "~/bin" $fish_user_paths
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true

@@ -1,0 +1,41 @@
+# dein
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
+# status line
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = { 'colorscheme': 'iceberg' }
+  set laststatus=2
+'''
+
+# colorscheme
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+  set background=dark
+  au InitCmd VimEnter * nested colorscheme iceberg
+'''
+
+# window resizing
+[[plugins]]
+repo = 'simeji/winresizer'
+hook_add = '''
+  let g:winresizer_enable = 1
+  let g:winresizer_finish_with_escape	= 1
+'''
+
+# GitHub
+[[plugins]]
+repo = 'skanehira/gh.vim'
+hook_add = '''
+  let g:gh_token = 'a6eae3e161b32c390e7b1fbb51c09b127bb94ea5'
+'''
+
+# editorconfig
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'

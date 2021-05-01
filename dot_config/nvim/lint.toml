@@ -1,0 +1,19 @@
+# lint
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+hook_add = '''
+  function! s:trailing_whitespace()
+    if &ft =~ 'markdown\|yaml'
+      return
+    endif
+    :FixWhitespace
+  endfunction
+  autocmd BufWritePre * call <SID>trailing_whitespace()
+'''
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+hook_add = '''
+  nmap ga <Plug>(EasyAlign)
+  xmap ga <Plug>(EasyAlign)
+'''

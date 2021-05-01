@@ -1,0 +1,9 @@
+Host github
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa
+  User git
+
+{{ if (eq .chezmoi.hostname "Pranc1ngPegasus.local") }}
+host i-* mi-*
+    ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+{{ end }}

@@ -1,0 +1,11 @@
+[user]
+  name = Pranc1ngPegasus
+  {{- if (eq .chezmoi.username "pranc1ngpegasus") }}
+  email = ride.or.die.2215@icloud.com
+  {{- else if (eq .chezmoi.username "tenma.fukaya") }}
+  email = tenma.fukaya@kyash.co
+  {{- end }}
+[core]
+  editor = nvim
+[push]
+  default = current

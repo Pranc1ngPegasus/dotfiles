@@ -1,0 +1,30 @@
+# filer
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let NERDTreeShowHidden = 1
+  nnoremap <C-n> :NERDTreeToggle<CR>
+'''
+
+# fuzzy finder
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+  nnoremap <C-f> :Ag<CR>
+  nnoremap <Space><Space> :Files .<CR>
+  let g:fzf_layout = { 'down': '~40%' }
+  let g:fzf_prefer_tmux = 1
+'''
+
+# Insert or delete brackets, parens, quotes in pair
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'junegunn/goyo.vim'
+
+[[plugins]]
+repo = 'knsh14/vim-github-link'
