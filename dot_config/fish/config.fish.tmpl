@@ -1,7 +1,3 @@
-{{- if (eq .chezmoi.username "tenma.fukaya") }}
-source ~/.config/fish/kyash.fish
-{{- end }}
-
 # PATH
 set PATH ~/bin $PATH
 
@@ -32,6 +28,13 @@ set -U FZF_TMUX 1
 
 # ghq
 set -x GHQ_SELECTOR fzf-tmux
+
+# Go
+{{- if (eq .chezmoi.username "tenma.fukaya") }}
+set -x GOPATH $HOME/go
+set PATH $GOPATH/bin $PATH
+set -x GOPRIVATE github.com/Kyash
+{{- end}}
 
 # tmux
 alias tmux='tmux -u'
