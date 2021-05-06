@@ -9,3 +9,8 @@
   editor = nvim
 [push]
   default = current
+[ghq]
+  root = /Users/tenma.fukaya/ghq
+  {{- if (eq .chezmoi.username "tenma.fukaya") }}
+  root = /Users/tenma.fukaya/go/src
+  {{- end }}
