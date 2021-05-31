@@ -10,7 +10,5 @@
 [push]
   default = current
 [ghq]
-  root = /Users/tenma.fukaya/ghq
-  {{- if (eq .chezmoi.username "tenma.fukaya") }}
-  root = /Users/tenma.fukaya/go/src
-  {{- end }}
+  root = /Users/{{- .chezmoi.username -}}/ghq
+  root = /Users/{{- .chezmoi.username -}}/go/src
