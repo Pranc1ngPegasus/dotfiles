@@ -9,8 +9,12 @@
   editor = nvim
 [push]
   default = current
-[init]
-  defaultBranch = main
+[url "ssh://git@github.com/Pranc1ngPegasus/"]
+	insteadOf = https://github.com/Pranc1ngPegasus/
+{{- if (eq .chezmoi.username "tenma.fukaya") }}
+[url "ssh://git@github.com/Kyash/"]
+	insteadOf = https://github.com/Kyash/
+{{- end }}
 [ghq]
   root = /Users/{{- .chezmoi.username -}}/ghq
   root = /Users/{{- .chezmoi.username -}}/go/src
