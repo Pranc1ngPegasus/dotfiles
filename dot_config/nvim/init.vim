@@ -27,7 +27,7 @@ autocmd!
 augroup END
 
 " fzf
-set runtimepath+=/usr/local/opt/fzf
+" set runtimepath+=/usr/local/opt/fzf
 
 " dein
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim

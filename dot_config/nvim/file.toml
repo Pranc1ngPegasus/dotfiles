@@ -8,7 +8,13 @@ hook_add = '''
 
 # fuzzy finder
 [[plugins]]
+repo = 'junegunn/fzf'
+build = './install'
+merged = 0
+
+[[plugins]]
 repo = 'junegunn/fzf.vim'
+depends = 'fzf'
 hook_add = '''
   nnoremap <C-f> :Ag<CR>
   nnoremap <Space><Space> :Files .<CR>
