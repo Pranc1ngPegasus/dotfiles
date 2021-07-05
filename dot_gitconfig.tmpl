@@ -17,4 +17,6 @@
 {{- end }}
 [ghq]
   root = /Users/{{- .chezmoi.username -}}/ghq
+{{- if (eq .chezmoi.username "tenma.fukaya") }}
   root = /Users/{{- .chezmoi.username -}}/go/src
+{{- end }}
