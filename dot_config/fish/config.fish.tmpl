@@ -12,6 +12,9 @@ set -x EDITOR nvim
 alias vim='nvim'
 alias cat='bat'
 
+# Homebrew
+eval (/opt/homebrew/bin/brew shellenv)
+
 # asdf
 {{- if (eq .chezmoi.arch "arm64") }}
 source /opt/homebrew/opt/asdf/asdf.fish
@@ -21,9 +24,6 @@ source /usr/local/opt/asdf/asdf.fish
 
 # direnv
 eval (direnv hook fish)
-
-# Homebrew
-eval (/opt/homebrew/bin/brew shellenv)
 
 # fzf
 # set -U FZF_DEFAULT_COMMAND 'fd -type f'
