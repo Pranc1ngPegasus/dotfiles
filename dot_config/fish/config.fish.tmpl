@@ -13,7 +13,11 @@ alias vim='nvim'
 alias cat='bat'
 
 # asdf
-source (/opt/homebrew/bin/brew --prefix asdf)/asdf.fish
+{{- if (eq .chezmoi.arch "arm64") }}
+source /opt/homebrew/opt/asdf/asdf.fish
+{{- else if (eq .chezmoi.arch "amd64") }}
+source /usr/local/opt/asdf/asdf.fish
+{{- end }}
 
 # direnv
 eval (direnv hook fish)
